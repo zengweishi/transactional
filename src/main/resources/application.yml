@@ -1,0 +1,15 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /transactional
+spring:
+  application:
+    name: transactional
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/transactional?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:dao/*.xml
+  type-aliases-package: com.transactional.Entiry
